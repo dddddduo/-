@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="top_tip">
+    <text class="iconfont icon-gonggao"></text>
+    被授权的公司在记账过程中都可使用你作为其经办人
+  </view>
+  <view class="business_list">
+    <view wx:for="{{businessList}}" wx:key="{{index}}" class="business_item">
+      <view>{{item.name}}</view>
+      <view>
+        <switch checked="{{item.sign}}" type="switch" color="#eb6100" data-id="{{item.ocId}}" bindchange="handleChange" />
+      </view>
+    </view>
+  </view>
+  <view class="null" wx:if="{{businessList.length === 0}}">
+    <image src="/assets/img/null.png"></image>
+    <view>暂无作为经办人企业</view>
+  </view>
+</view>

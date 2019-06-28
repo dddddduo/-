@@ -1,0 +1,4 @@
+<view class="container">
+	<image src="/assets/img/log_app/logo4.png" />
+	<view>{{slogan}}</view>
+</view>

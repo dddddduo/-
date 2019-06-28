@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="navs">
+    <view class="slide_nav">
+      <view bindtap="handleIndex" data-index="0">
+        <text style="border-color: {{selIndex === 0 ? '#fff' : ''}}">未确认</text>
+      </view>
+      <view bindtap="handleIndex" data-index="1">
+        <text style="border-color: {{selIndex === 1 ? '#fff' : ''}}">已确认</text>
+      </view>
+    </view>
+    <view class="type_nav">
+      <view wx:for="{{types}}" wx:key="{{index}}" bindtap="handleType" data-type='{{index}}'>
+        <text style="color: {{index === selType ? '#eb6100' : ''}}">{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="list_item" wx:for="{{list}}" wx:key="{{index}}" bindtap="handleDetail" data-id="{{item.id}}" data-title="{{item.chainName}}">
+      <view class="show_section">
+        <view class="item_info"><text class="iconfont icon-mingxi"></text>{{item.chainName}}</view>
+        <view class="item_info"><text class="iconfont icon-jinrong_realtime"></text>{{item.date}}</view>
+        <view class="item_info"><text class="iconfont icon-gongsi"></text>{{item.companyName}}</view>
+      </view>
+      <view>
+        <text class="iconfont icon-qianwang"></text>
+      </view>
+    </view>
+    <view class="null" wx:if="{{list.length === 0}}">
+      <image src="/assets/img/null.png"></image>
+      <view>暂无记账</view>
+    </view>
+  </view>
+</view>

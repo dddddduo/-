@@ -1,0 +1,57 @@
+<view class="container">
+  <view class="show_section">
+    <view class="title_line">
+      <text>项目名称：</text>
+      <text>{{contract.projectName}}</text>
+    </view>
+    <view class="title_line">
+      <text>采购方：</text>
+      <text>{{contract.type === '1' ? contract.ownCompany : contract.involvedCompany}}</text>
+    </view>
+    <view class="title_line">
+      <text>采购方法人：</text>
+      <text>{{contract.type === '1' ? contract.ownPerson : contract.involvedPerson}}</text>
+    </view>
+    <view class="title_line">
+      <text>销售方：</text>
+      <text>{{contract.type === '1' ? (contract.involvedCompany || '未填写') :  (contract.ownCompany || '未填写')}}</text>
+    </view>
+    <view class="title_line">
+      <text>销售方法人：</text>
+      <text>{{contract.type === '1' ? contract.involvedPerson : contract.ownPerson}}</text>
+    </view>
+    <view class="title_section">
+      根据《中国人民共和国合同法》及其他法律，法规的有关规定，甲、乙双方在平等互利的基础上，遵循平等、自愿、公平及诚信的原则，经友好协商，达成如下合同内容：
+    </view>
+    <view class="section_line">
+      第一条：本合同有效期为 {{contract.begin}} 日至 {{contract.end}} ，甲方向乙方订购商品；
+    </view>
+    <view class="section_line">
+      第二条：本合同有效期内甲方订购乙方商品不少于{{contract.less}}元；
+    </view>
+    <view class="section_line">
+      第三条：本合同有效期内，由发起方通过九星电子商务平台邀请交易方在平台记录全程供应链数据，至少有一方记录全程数据。
+    </view>
+  </view>
+  <view class="ul-title">经办人信息</view>
+  <view class="agent_list">
+    <view class="agent_item" wx:for="{{contract.agents}}" wx:key='{{index}}'>
+      <view>{{item.name}}</view>
+      <view>{{item.phone}}</view>
+    </view>
+    <view class="inner_null" wx:if="{{contract.agents.length === 0}}">未添加经办人</view>
+  </view>
+  <view class="ul-title">电子原件或扫描件</view>
+  <view class="atta_list">
+    <view wx:for="{{contract.attas}}" wx:key='{{index}}' class="atta_item">
+      <view wx:if="{{item.extend === 'pdf'}}">{{item.name}}</view>
+      <image src='{{_url + item.url}}' data-index="{{index}}" lazy-load='1' bindtap="handlePreview" wx:else />
+    </view>
+    <view class="inner_null" wx:if="{{contract.attas.length === 0}}">未添加电子原件</view>
+  </view>
+  <text class="ul-title">备注</text>
+  <view class="text_area">
+    <view class="info" wx:if="{{contract.remark}}">{{contract.remark}}</view>
+    <view class="inner_null" wx:else>未填写备注</view>
+  </view>
+</view>

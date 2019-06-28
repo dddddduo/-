@@ -1,0 +1,90 @@
+<!--pages/bills/settlement/settlement.wxml-->
+<view id='settlement_wrapper'>
+  <view class='settlement_block' wx:for="{{settlementList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <view class='settlement_item'>
+      <view class='view_li'>
+        <text class='li_title'>结算单标题</text>
+        <text class='li_content'>{{item.name ? item.name : '暂无数据'}}</text>
+      </view>
+      <view class='view_li'>
+        <text class='li_title'>出货日期</text>
+        <text class='li_content'>{{item.createDate ? item.createDate : '暂无数据'}}</text>
+      </view>
+      <view class='view_li'>
+        <text class='li_title'>结算金额</text>
+        <text class='li_content'>{{item.amount ? item.amount : '暂无数据'}}</text>
+      </view>
+      <view class='view_li'>
+        <text class='li_title'>关联电子账单</text>
+        <text class='li_content'>{{item.orderNames ? item.orderNames : '暂无数据'}}</text>
+      </view>
+    </view>
+    <view class='ul-title'>订单结算信息</view>
+    <view class='settlement_item' wx:for="{{item.orderinfos}}" wx:for-item="order" wx:for-index="index1" wx:key="index1" wx:if="item.orderInfos.length > 0">
+      <view class='view_li'>
+        <text class='li_title'>单位</text>
+        <text class='li_content'>{{order.unit ? order.unit : '暂无数据'}}</text>
+      </view>
+      <view class='view_li'>
+        <text class='li_title'>数量</text>
+        <text class='li_content'>{{order.number ? order.number : '暂无数据'}}</text>
+      </view>
+      <view class='view_li'>
+        <text class='li_title'>合计(元)</text>
+        <text class='li_content'>{{order.value ? order.value : '暂无数据'}}</text>
+      </view>
+    </view>
+    <!-- <div class="content_none" wx:if="item.orderInfos.length === 0">暂无数据</div> -->
+    <view class="ul-title">经办人信息</view>
+    <view class="agent_list">
+      <view class="agent_item" wx:for="{{item.agents}}" wx:for-item="agent" wx:key='{{index}}'>
+        <view>{{agent.name}}</view>
+        <view>{{agent.phone}}</view>
+      </view>
+      <view class="inner_null" wx:if="{{item.agents.length === 0}}">未添加经办人</view>
+    </view>
+    <view class="ul-title">电子原件或扫描件</view>
+    <view class="atta_list">
+      <view wx:for="{{item.attas}}" wx:key='{{index}}' wx:for-item="atta" class="atta_item">
+        <view wx:if="{{atta.extend === 'pdf'}}">{{atta.name}}</view>
+        <image src='{{_url + atta.url}}' data-index="{{index}}" lazy-load='1' bindtap="handlePreview" wx:else />
+      </view>
+      <view class="inner_null" wx:if="{{item.attas.length === 0}}">未添加电子原件</view>
+    </view>
+    <text class="ul-title">备注</text>
+    <view class="text_area">
+      <view class="info" wx:if="{{item.remark}}">{{item.remark}}</view>
+      <view class="inner_null" wx:else>未填写备注</view>
+    </view>
+    <!-- <view class='person_message'>经办人信息</view>
+    <view class='jingbanren-name'>
+      <view class='view_ul' wx:for="{{item.agents}}" wx:for-item="agent" wx:for-index="index1" wx:key="index1" wx:if="item.agents.length !== 0">
+        <view class='view_li'>
+          <text class='li_title'>经办人姓名</text>
+          <text class='li_content'>{{agent.name}}</text>
+        </view>
+        <view class='view_li'>
+          <text class='li_title'>手机号</text>
+          <text class='li_content'>{{agent.phone}}</text>
+        </view>
+      </view>
+      <div class="content_none" wx:if="item.agents.length === 0">暂无数据</div>
+      <view class='enclosure'>
+        <view class='person_message'>电子元件或扫描件</view>
+        <view class='enclosure_item' wx:for="{{item.attas}}" wx:for-item="atta" wx:for-index="index1" wx:key="index1" wx:if="item.attas.length !== 0">
+          <view class='img-list' wx:if="atta.extend !== 'pdf'">
+            <image wx:src='URL + atta.url' alt=""/>
+          </view>
+          <view class='pdf-list'>
+            <text>{{atta.name}}</text>
+          </view>
+        </view>
+      </view>
+      <div class="content_none" wx:if="item.attas.length === 0">暂无数据</div>
+      <view class="text-area">
+        <view class='person_message'>备注</view>
+        <text>{{item.remark ? item.remark : '暂无数据'}}</text>
+      </view>
+    </view> -->
+  </view>
+</view>

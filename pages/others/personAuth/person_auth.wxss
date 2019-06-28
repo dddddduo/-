@@ -1,0 +1,70 @@
+.container {}
+.auth {
+  padding: 60rpx 0;
+}
+.auth .text_wrap {
+  padding: 0 40rpx;
+  font-size: 16px;
+}
+.text_wrap>view:first-child {
+  padding: 30rpx 0;
+  text-align: center;
+}
+.camera_wrap {
+  width: 400rpx;
+  height: 400rpx;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  border: 2px solid #0f439c;
+  border-radius: 50%;
+  padding: 15rpx;
+}
+.camera_wrap camera {
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 50%;
+}
+.text_wrap>view:first-child text {
+  font-size: 72px;
+  color: #0f439c;
+}
+.camera_wrap>view:nth-child(2) {
+  margin: 50rpx 0;
+  text-align: center;
+  color: #666;
+  line-height: 48rpx;
+  font-size: 16px;
+}
+.text_wrap>view:nth-child(2), .text_wrap>view:nth-child(3) {
+  text-align: center;
+  color: #666;
+  line-height: 48rpx;
+}
+.text_wrap>view:nth-child(4) {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+}
+.text_wrap>view:nth-child(4) view {
+  background: #0f439c;
+  color: #fff;
+  height: 100%;
+  line-height: 100rpx;
+  text-align: center;
+}
+.authed {
+  padding: 120rpx 0;
+  text-align: center;
+}
+.authed text {
+  font-size: 72px;
+  color: #0f439c;
+}
+.authed view {
+  margin-top: 100rpx;
+  color: #666;
+  line-height: 48rpx;
+  font-size: 16px;
+}

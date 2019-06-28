@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="board">
+    <image src="/assets/img/user_app/boss.png"></image>
+    <view>{{userInfo.name || userInfo.phone}}</view>
+    <!-- <image src="/assets/img/log_app/logout.png"></image> -->
+  </view>
+  <view class="auth_list">
+    <view class="auth_item" bindtap="handleDetail" data-index="0">
+      <view>
+        <view>个人信息</view>
+        <view>完善身份信息，体验更多服务</view>
+      </view>
+      <view>
+        <text>{{userInfo.name ? '已完善' : '未完善'}}</text>
+        <text class="iconfont icon-qianwang"></text>
+      </view>
+    </view>
+    <view class="auth_item" bindtap="handleDetail" data-index="1">
+      <view>
+        <view>证件照片</view>
+        <view>扫描身份证件照，享受更多服务</view>
+      </view>
+      <view>
+        <text style="color: {{!userInfo.idcardBack ?  '#999' : ''}}">{{userInfo.cardAuth ? '已完善' : '未完善'}}</text>
+        <text class="iconfont icon-qianwang"></text>
+      </view>
+    </view>
+    <view class="auth_item" bindtap="handleDetail" data-index="2">
+      <view>
+        <view>人像照片</view>
+        <view>体验刷脸科技，享受更多服务</view>
+      </view>
+      <view>
+        <text style="color: {{!userInfo.video ? '#999' : ''}}">{{!userInfo.videoAuth ? '已完善' : '未完善'}}</text>
+        <text class="iconfont icon-qianwang"></text>
+      </view>
+    </view>
+  </view>
+</view>

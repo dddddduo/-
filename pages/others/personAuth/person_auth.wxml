@@ -1,0 +1,25 @@
+<!--pages/others/personAuth/person_auth.wxml-->
+<view class="container">
+  <view class="auth" wx:if="{{canIAuth}}">
+    <view class="camera_wrap" wx:if="{{startRecord}}">
+      <view class="camera">
+        <camera device-position="front" flash="auto" wx:if="{{showCamera}}"></camera>
+      </view>
+      <view>{{infoTip}}</view>
+    </view>
+    <view wx:else class="text_wrap">
+      <view>
+        <text class="iconfont {{errInfo !== '认证失败' ? 'icon-renlianshibie_o' : 'icon-notpass-1-copy'}}"></text>
+      </view>
+      <view>{{errInfo}}</view>
+      <view style="color: {{errInfo !== '认证失败' ? '' : '#ff0010'}}">{{errInfo1}}</view>
+      <view>
+        <view bindtap="handleRecord">开始认证</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class="authed">
+    <text class="iconfont icon-renlianshibie_o"></text>
+    <view>您已完成认证，如需修改，请联系客服人员。</view>
+  </view>
+</view>

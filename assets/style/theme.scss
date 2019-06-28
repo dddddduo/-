@@ -1,0 +1,51 @@
+// fucntion
+@function rem ($px) {
+  @return ($px / 37.5px) * 1rem
+}
+
+$bg: #f9f9f9; /*标准底色*/
+$theme: #eb6100;/*橙色*/
+$theme-d: #f5a66e; /*浅橙色*/
+$err: #ff0010; /*错误 红色*/
+$theme-b: #0f4397; /*对色 蓝色*/
+$theme-g: #00937f; /*对色 绿色*/
+$theme-word: #353535; /* 文字颜色*/
+$theme-border: #eee; /*边框颜色*/
+$bottomButtom: rem(50px); /*底部按钮高度*/
+$buttonHeight: rem(42px); /*标准条目高度*/
+$header: rem(45px); /*顶部导航栏高度*/
+$wechat-sucess: #1aad19;
+
+// class
+.null {
+  // opacity: .67;
+  padding: rem(70px) 0;
+  color: #999;
+  font-size: 32px;/*px*/
+  text-align: center;
+  img {
+    margin: rem(10px) auto;
+    width: rem(120px);
+  }
+}
+
+
+// mixin
+@mixin muline ($line) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}
+
+@mixin line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 动画
+@keyframes slideUp {
+  from {margin-top: 600px;}
+  to {margin-top: 0}
+}

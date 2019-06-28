@@ -1,0 +1,24 @@
+  <view class="container">
+    <view class="img_wrap">
+      <image src="../../../assets/img/log_app/logo4.png" alt="" />
+    </view>
+    <view class="form">
+      <view class="form_line">
+        <text class="iconfont icon-shouji"></text>
+        <view>
+          <input bindinput="handleInput" data-key='phone' type="number" maxlength='11' placeholder="请输入手机号" />
+        </view>
+      </view>
+      <view class="form_line_three">
+        <text class="iconfont icon-bianhao1"></text>
+        <view>
+          <input bindinput="handleInput" data-key='code' type="number" maxlength='11' placeholder="请输入验证码" />
+        </view>
+        <view bindtap="handleCode">{{conutNum}}</view>
+      </view>
+    </view>
+    <view class="info_tip">{{infoTip}}</view>
+    <view class="btn">
+      <view bindtap="handleLogin" hover-class="btn_click">登录</view>
+    </view>
+  </view>

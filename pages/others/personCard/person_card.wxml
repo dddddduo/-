@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="err_info">{{errInfo}}</view>
+  <view class="card_section">
+    <view class="pic_section">
+      <image bindtap="handleUpload" data-key="idcardFront"  src="{{pic.idcardFront}}" wx:if="{{pic.idcardFront}}"/>
+      <image src="/assets/img/card/card_front1.png" wx:else bindtap="handleUpload" data-key="idcardFront" />
+    </view>
+    <view class="pic_title">身份证国徽面</view>
+  </view>
+  <view class="card_section">
+    <view class="pic_section">
+      <image src="{{pic.idcardBack}}" bindtap="handleUpload" data-key="idcardBack" wx:if="{{pic.idcardBack}}" />
+      <image src="/assets/img/card/card_back1.png" wx:else bindtap="handleUpload" data-key="idcardBack" />
+    </view>
+    <view class="pic_title">身份证信息面</view>
+  </view>
+  <view class="btn" wx:if="{{canISubmit}}">
+    <view hover-class="click_class" style="background: {{picPath.idcardFront && picPath.idcardBack ? '#0f439c' : '#ccc'}}" bindtap="handleSubmit">提交</view>
+  </view>
+</view>

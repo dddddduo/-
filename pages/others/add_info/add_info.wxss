@@ -1,0 +1,66 @@
+page {
+  /* background: #fafafa; */
+  background: #fff;
+  height: 100%;
+}
+.info {
+  padding: 0 20rpx;
+  color: #666;
+  border-bottom: 1px solid #eaeaea;
+  background: #fff;
+}
+.img_wrap {
+  text-align: center;
+  padding-top: 40rpx;
+}
+.img_wrap image {
+  margin: 0 auto;
+  margin-bottom: 50rpx;
+  width: 400rpx;
+  height: 400rpx;
+}
+.form {
+  padding: 80rpx 40rpx;
+}
+.form .form_line {
+  margin-top: 64rpx;
+  border-bottom: 1px solid #ccc;
+}
+.form .form_line view {
+  /* width: 600rpx; */
+  padding: 0 20rpx;
+  height: 72rpx;
+}
+.form_line input {
+  width: 100%;
+  height: 100%;
+}
+.btn {
+  padding: 0 40rpx;
+  margin-top: 20rpx;
+}
+.btn view {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border: none;
+  background: #eb6100;
+  color: #fff;
+  border-radius: 60rpx;
+  text-align: center;
+  font-size: 14px;
+}
+.btn view:last-child {
+  background: #ccc;
+  margin-top: 40rpx;
+}
+.btn_click {
+  opacity: 0.85;
+}
+.info_tip {
+  padding: 0 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 14px;
+  color: #ff0010;
+}

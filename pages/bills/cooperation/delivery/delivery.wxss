@@ -1,0 +1,68 @@
+/* pages/bills/cooperation/delivery/delivery.wxss */
+#delivery {
+  padding-bottom: 40rpx;
+  background: #fff;
+}
+.delivery-list .list view {
+  padding: 0 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  display: flex;
+}
+.delivery-list .list view .span {
+  font-size: 14px;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(102,102,102,1);
+}
+.delivery-list .list view .p {
+  font-size:14px;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+  flex: 1;
+}
+.delivery-list .ul-title {
+  padding: 0 40rpx 10rpx 16rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size:14px; /*px*/
+  font-family:PingFang-SC-Medium;
+  font-weight:bold;
+  color:rgba(102,102,102,1);
+}
+.delivery-list .pdf_image .pdf_list text {
+  display: inline-block;
+  padding: 10rpx 20rpx;
+  text-decoration: underline;
+  color: #eb6100;
+}
+.delivery-list .pdf_image .img_list image {
+  display: inline-block;
+  width: 26%;
+  height: 120rpx;
+  margin: 20rpx;
+}
+.delivery-list .text_area {
+  line-height: 40rpx;
+  font-size: 14px;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+  padding: 0 40rpx;
+  min-height: 120rpx;
+}
+.delivery-list .content_none {
+  line-height: 80rpx;
+  font-size:14px;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+  padding: 0 40rpx;
+  min-height: 80rpx;
+}

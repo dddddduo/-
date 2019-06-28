@@ -1,0 +1,92 @@
+/* pages/bills/invoice/invoice.wxss */
+#invoice_wrapper {
+  font-size: 29rpx;
+  background: #fff;
+}
+
+.invoice_block {
+  min-height: 50rpx;
+}
+
+.invoice_block, .invoice_item {
+  width: 100%;
+}
+
+.view_li {
+  padding: 0 40rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view_li>.li_title {
+  color: #666;
+  height: 100%;
+  line-height: 80rpx;
+}
+
+.view_li>.li_content {
+  color: #999;
+  width: 512rpx;
+  text-align: right;
+  height: 100%;
+  line-height: 80rpx;
+}
+
+.content_none {
+  line-height: 70rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  padding: 0 20rpx;
+  min-height: 40rpx;
+}
+
+.enclosure {
+  width: 100%;
+}
+
+.enclosure>.enclosure_item>.img-list {
+  padding: 0 20rpx;
+}
+
+.enclosure>.enclosure_item>.img-list>image {
+  display: inline-block;
+  width: 90rpx;
+  height: 70rpx;
+  margin: 15rpx;
+}
+
+.enclosure>.enclosure_item>.pdf-list {
+  padding: 0 20rpx;
+}
+
+.enclosure>.enclosure_item>.pdf-list>text {
+  display: inline-block;
+  padding: 10rpx 10rpx;
+  text-decoration: underline;
+  color: orange;
+}
+
+.text-area {
+  width: 100%;
+}
+
+.text-area>text {
+  display: inline-block;
+  line-height: 25rpx;
+  font-size: 30rpx;
+  color: rgba(153, 153, 153, 1);
+  padding: 0 25rpx;
+  min-height: 75rpx;
+}
+
+.person_message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding:8rpx 0 8rpx 9rpx;
+  color: #666;
+  font-weight: bold;
+}

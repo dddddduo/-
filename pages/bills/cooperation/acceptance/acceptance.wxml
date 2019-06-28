@@ -1,0 +1,71 @@
+<!--pages/bills/acceptance/acceptance.wxml-->
+<view id='acceptance_wrapper'>
+  <view class='acceptance_block' wx:for="{{accepList}}" wx:for-item="item" wx:for-index="index" wx:key="index" wx:if="accepList.length > 0">
+    <view class='acceptance_item'>
+      <view class='view_li'>
+        <text class='li_title'>入库单标题</text>
+        <text class='li_content'>{{item.name ? item.name : '暂无数据'}}</text>
+      </view>
+      <view class='view_li'>
+        <text class='li_title'>出单时间</text>
+        <text class='li_content'>{{item.createDate ? item.createDate : '暂无数据'}}</text>
+      </view>
+    </view>
+    <view class='person_message'>入库管理员信息</view>
+    <view class='acceptance_item'>
+      <view class='view_li'>
+        <text class='li_title'>姓名</text>
+        <text class='li_content'>{{item.wperson ? item.wperson : '暂无数据'}}</text>
+      </view>
+      <view class='view_li'>
+        <text class='li_title'>手机号</text>
+        <text class='li_content'>{{item.wphone ? item.wphone : '暂无数据'}}</text>
+      </view>
+      <view class='view_li'>
+        <text class='li_title'>公司名称</text>
+        <text class='li_content'>{{item.wcompany ? item.wcompany : '自储'}}</text>
+      </view>
+    </view>
+    <view class='person_message'>商品信息</view>
+    <view class='acceptance_item' wx:for="{{item.goods}}" wx:for-item="good" wx:for-index="index" wx:key="index" wx:if="item.goods.length > 0">
+      <view class='view_li'>
+        <text class='li_title'>商品名称</text>
+        <text class='li_content'>{{good.name ? good.name : '暂无数据'}}</text>
+      </view>
+      <view class='view_li'>
+        <text class='li_title'>单位</text>
+        <text class='li_content'>{{good.unit ? good.unit : '暂无数据'}}</text>
+      </view>
+      <view class='view_li'>
+        <text class='li_title'>数量</text>
+        <text class='li_content'>{{good.number ?  good.number : '暂无数据'}}</text>
+      </view>
+      <view class='view_li'>
+        <text class='li_title'>合计(元)</text>
+        <text class='li_content'>{{good.sum ? good.sum : '暂无数据'}}</text>
+      </view>
+    </view>
+    <!-- <div class="content_none" wx:if="item.goods.length === 0">暂无数据</div> -->
+    <view class="ul-title">经办人信息</view>
+    <view class="agent_list">
+      <view class="agent_item" wx:for="{{item.agents}}" wx:for-item="agent" wx:key='{{index}}'>
+        <view>{{agent.name}}</view>
+        <view>{{agent.phone}}</view>
+      </view>
+      <view class="inner_null" wx:if="{{item.agents.length === 0}}">未添加经办人</view>
+    </view>
+    <view class="ul-title">电子原件或扫描件</view>
+    <view class="atta_list">
+      <view wx:for="{{item.attas}}" wx:key='{{index}}' wx:for-item="atta" class="atta_item">
+        <view wx:if="{{atta.extend === 'pdf'}}">{{atta.name}}</view>
+        <image src='{{_url + atta.url}}' data-index="{{index}}" lazy-load='1' bindtap="handlePreview" wx:else />
+      </view>
+      <view class="inner_null" wx:if="{{item.attas.length === 0}}">未添加电子原件</view>
+    </view>
+    <text class="ul-title">备注</text>
+    <view class="text_area">
+      <view class="info" wx:if="{{item.remark}}">{{item.remark}}</view>
+      <view class="inner_null" wx:else>未填写备注</view>
+    </view>
+  </view>
+</view>

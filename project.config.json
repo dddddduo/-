@@ -1,0 +1,196 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.7.0",
+	"appid": "wxfb6b0f248206cc63",
+	"projectname": "miniap_web_mian",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 19,
+			"list": [
+				{
+					"id": 0,
+					"name": "login",
+					"pathName": "pages/others/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "me",
+					"pathName": "pages/me/me",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "message",
+					"pathName": "pages/message/message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "messagedetail",
+					"pathName": "pages/others/messageDetail/message_detail",
+					"query": "id=5ce36e23948d9420c4005b82",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "chain",
+					"pathName": "pages/chain/chain",
+					"query": "id=5ce36e23948d9420c4005b82",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "chain_detail",
+					"pathName": "pages/others/chainDetail/chain_detail",
+					"query": "id=30&title=采购合同6",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "person_info",
+					"pathName": "pages/others/personInfo/person_info",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "person_card",
+					"pathName": "pages/others/personCard/person_card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "person_auth",
+					"pathName": "pages/others/personAuth/person_auth",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "auth",
+					"pathName": "pages/others/add_info/add_info",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "add_info",
+					"pathName": "pages/others/add_info/add_info",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "contract",
+					"pathName": "pages/bills/contract/contract",
+					"query": "id=70fb1d14-0383-11e9-a600-0242ac130002&confirmId=19",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "order",
+					"pathName": "pages/bills/cooperation/order/order",
+					"query": "id=66023444-02be-11e9-85ae-0242ac130002&confirmId=19",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "deposit",
+					"pathName": "pages/bills/cooperation/deposit/deposit",
+					"query": "id=64086b34-09d2-11e9-996c-0242ac130002&confirmId=19",
+					"scene": null
+				},
+				{
+					"id": 15,
+					"name": "delivery",
+					"pathName": "pages/bills/cooperation/delivery/delivery",
+					"query": "id=949ae92a-0a77-11e9-92e7-0242ac130002&confirmId=19",
+					"scene": null
+				},
+				{
+					"id": 16,
+					"name": "waybill",
+					"pathName": "pages/bills/cooperation/waybill/waybill",
+					"query": "id=fada5768-09d0-11e9-9bc6-0242ac130002&confirmId=19",
+					"scene": null
+				},
+				{
+					"id": 17,
+					"name": "acceptance",
+					"pathName": "pages/bills/cooperation/acceptance/acceptance",
+					"query": "id=7d2a0a32-0a77-11e9-9abf-0242ac130002&confirmId=19",
+					"scene": null
+				},
+				{
+					"id": 18,
+					"name": "invoice",
+					"pathName": "pages/bills/cooperation/invoice/invoice",
+					"query": "id=2d65ea62-3b31-11e9-9df4-0242ac130002&confirmId=93",
+					"scene": null
+				},
+				{
+					"id": 19,
+					"name": "payment",
+					"pathName": "pages/bills/cooperation/payment/payment",
+					"query": "id=768d9a32-3b31-11e9-973f-0242ac130002&confirmId=93",
+					"scene": null
+				},
+				{
+					"id": 20,
+					"name": "settlement",
+					"pathName": "pages/bills/cooperation/settlement/settlement",
+					"query": "id=221d90f4-09d3-11e9-83dc-0242ac130002&confirmId=30",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.info {
+  padding: 0 30rpx;
+  line-height: 80rpx;
+  font-size: 16px;
+}
+.info text {
+  font-size: 22px;
+  color: #eb6100;
+  margin-right: 16rpx;
+}
+.info_title {
+  word-break: break-all;
+  color: #333;
+}
+.info_time {
+  color: #999;
+}
+.info_sender {
+  color: #666;
+}
+.info_detail {
+  margin: 0 30rpx;
+  margin-top: 26rpx;
+  border: 1px solid #eaeaea;
+  background: #fff;
+  min-height: 280rpx;
+  line-height: 40rpx;
+  padding: 10rpx;
+  word-break: break-all;
+  color: #333;
+}

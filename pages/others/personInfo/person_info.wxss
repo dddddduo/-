@@ -1,0 +1,57 @@
+.container {
+  background: #fff;
+  padding-bottom: 100rpx;
+}
+.show_line {
+  margin: 0 20rpx;
+  padding: 0 10rpx;
+  display: flex;
+  align-items: center;
+  min-height: 90rpx;
+  border-bottom: 1px solid #eaeaea;
+}
+.show_title {
+  width: 240rpx;
+  height: 100%;
+  line-height: 90rpx;
+  color: #666;
+}
+.show_section {
+  width: 450rpx;
+  height: 100%;
+  line-height: 90rpx;
+  word-break: break-all;
+  display: flex;
+}
+.show_section view {
+  width: 100%;
+  padding: 0 8rpx;
+  color: #333;
+}
+.show_section view.line_null {
+  color: #999;
+}
+.show_section input {
+  width: 100%;
+  padding: 0 8rpx;
+}
+.err_info {
+  line-height: 64rpx;
+  color: #ff0010;
+  padding: 20rpx;
+}
+.btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.btn view {
+  height: 100rpx;
+  color: #fff;
+  background: #eb6100;
+  font-size: 16px;
+  text-align: center;
+  line-height: 100rpx;
+  /* border-radius: 6rpx; */
+}

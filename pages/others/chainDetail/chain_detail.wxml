@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="show_section">
+    <view class="title_line" bindtap="handleDetail" data-url="/pages/bills/contract/contract" data-id="{{contract.id}}">
+      <view>{{contract.name}}</view>
+      <view>
+        <text class="iconfont icon-qianwang"></text>
+      </view>
+    </view>
+  </view>
+  <view class="show_section" wx:for="{{types}}" wx:key="{{index}}">
+    <view class="title_line" bindtap="handleSlide" data-len="{{detail[item.key].length}}" data-index="{{index}}" data-item="{{item}}">
+      <view>{{item.name}}</view>
+      <view style="-webkit-transform: {{item.height === '0' ? 'rotateZ(0deg)' : 'rotateZ(90deg)'}}">
+        <text class="iconfont icon-qianwang"></text>
+      </view>
+    </view>
+    <!-- <view class="show_list"> -->
+    <view class="show_list" style="height: {{item.height}}">
+      <view wx:if="{{detail[item.key].length === 0}}" class="null_line">
+        <text class="iconfont icon-jinrong_report"></text>
+        <view>暂无{{item.name}}</view>
+      </view>
+      <view class="inner_line" wx:for="{{detail[item.key]}}" wx:for-index="index1" wx:key="{{index1}}" wx:for-item="val" bindtap="handleDetail" data-url="{{item.url}}" data-id="{{val.id}}" hover-class="click_class">
+        {{val.name}}
+      </view>
+    </view>
+  </view>
+</view>

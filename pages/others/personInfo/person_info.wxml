@@ -1,0 +1,136 @@
+<view class="container">
+  <!-- 姓名 -->
+  <view class="show_line">
+    <view class="show_title">
+      <text>姓名</text>
+    </view>
+    <view class="show_section">
+      <view class="{{!detail.name ? 'line_null' : ''}}" wx:if="{{showOrEdit}}">{{detail.name || '未填写'}}</view>
+      <input
+      wx:else type="text"
+      value="{{detail.name}}"
+      placeholder="请输入姓名"
+      bindinput="handleInput"
+      data-key="name"
+      />
+    </view>
+  </view>
+  <!-- 身份证号 -->
+  <view class="show_line">
+    <view class="show_title">
+      <text>身份证号</text>
+    </view>
+    <view class="show_section">
+      <view class="{{!detail.iDnumber ? 'line_null' : ''}}" >{{detail.iDnumber || '未填写'}}</view>
+      <!-- <input
+      ype="text"
+      value="{{detail.iDnumber}}"
+      placeholder="请输入身份证号码"
+      bindinput="handleInput"
+      data-key="iDnumber"
+      /> -->
+    </view>
+  </view>
+  <!-- 手机号 -->
+  <view class="show_line">
+    <view class="show_title">
+      <text>手机号</text>
+    </view>
+    <view class="show_section">
+      <view wx:if="{{showOrEdit}}">{{detail.phone}}</view>
+      <input
+      wx:else type="text"
+      value="{{detail.phone}}"
+      placeholder="请输入登录手机号"
+      bindinput="handleInput"
+      data-key="phone"
+      />
+    </view>
+  </view>
+  <!-- 邮箱 -->
+  <view class="show_line">
+    <view class="show_title">
+      <text>邮箱</text>
+    </view>
+    <view class="show_section">
+      <view class="{{!detail.email ? 'line_null' : ''}}" wx:if="{{showOrEdit}}">{{detail.email || '未填写'}}</view>
+      <input
+      wx:else
+      value="{{detail.email}}"
+      placeholder="输入邮箱"
+      bindinput="handleInput"
+      data-key="email"
+      />
+    </view>
+  </view>
+  <!-- 所属公司 -->
+  <view class="show_line">
+    <view class="show_title">
+      <text>所属公司</text>
+    </view>
+    <view class="show_section">
+      <view class="{{!detail.company ? 'line_null' : ''}}" wx:if="{{showOrEdit}}">{{detail.company || '未填写'}}</view>
+      <input
+      wx:else type="text"
+      value="{{detail.company}}"
+      placeholder="输入所在的公司"
+      bindinput="handleInput"
+      data-key="company"
+      />
+    </view>
+  </view>
+  <!-- 办公室电话 -->
+  <view class="show_line">
+    <view class="show_title">
+      <text>办公室电话</text>
+    </view>
+    <view class="show_section">
+      <view class="{{!detail.officePhone ? 'line_null' : ''}}" wx:if="{{showOrEdit}}">{{detail.officePhone || '未填写'}}</view>
+      <input
+      wx:else
+      value="{{detail.office_phone}}"
+      placeholder="输入办公室电话"
+      bindinput="handleInput"
+      data-key="office_phone"
+      />
+    </view>
+  </view>
+  <!-- 微信 -->
+  <view class="show_line">
+    <view class="show_title">
+      <text>微信</text>
+    </view>
+    <view class="show_section">
+      <view class="{{!detail.weChat ? 'line_null' : ''}}" wx:if="{{showOrEdit}}">{{detail.weChat || '未填写'}}</view>
+      <input
+      wx:else
+      type="text"
+      value="{{detail.wechat}}"
+      placeholder="输入微信"
+      bindinput="handleInput"
+      data-key="wechat"
+      />
+    </view>
+  </view>
+  <!-- qq -->
+  <view class="show_line">
+    <view class="show_title">
+      <text>QQ</text>
+    </view>
+    <view class="show_section">
+      <view class="{{!detail.qq ? 'line_null' : ''}}" wx:if="{{showOrEdit}}">{{detail.qq || '未填写'}}</view>
+      <input
+      wx:else
+      type="text"
+      value="{{detail.qq}}"
+      placeholder="输入QQ"
+      bindinput="handleInput"
+      data-key="qq"
+      />
+    </view>
+  </view>
+  <view class="err_info">{{errInfo}}</view>
+  <view class="btn">
+    <view hover-class="click_class" bindtap="handleChange">{{showOrEdit ? '编辑' : '保存'}}</view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="info_title info">
+    <text class="iconfont icon-shoucang-1"></text>{{detail.title}}</view>
+  <view class="info_time info">
+    <text class="iconfont icon-jinrong_realtime"></text>{{detail.date}}</view>
+  <view class="info_sender info">
+    <text class="iconfont icon-jinrong_group"></text>{{detail.sender}}</view>
+  <view class="info_detail">{{detail.content}}</view>
+</view>

@@ -1,0 +1,23 @@
+<view class="container">
+  <!-- <view class="img_wrap">
+    <image src="/assets/img/auth.png"></image>
+  </view> -->
+  <!-- <view class="info">请输入您姓名以及您的身份证号，实名认证后将用于九星平台经办人使用</view> -->
+  <view class="form">
+    <view class="form_line">
+      <view class="input_wrap">
+        <input placeholder="请输入您的姓名" bindinput="handleInput" data-key="name" maxlength="16"/>
+      </view>
+    </view>
+    <view class="form_line">
+      <view class="input_wrap">
+        <input placeholder="请输入身份证号码" bindinput="handleInput" data-key="iDnumber"/>
+      </view>
+    </view>
+  </view>
+  <view class="info_tip">{{errInfo}}</view>
+  <view class="btn">
+    <view bindtap="handleAuth">实名认证</view>
+    <view bindtap="handleBack">返回登录</view>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="message_list">
+    <view class="message_item" wx:for="{{messageList}}" wx:key="{{index}}" style="background: {{item.read === '1' ? '#fff' : ''}}" bindtap="handleDetail" data-id="{{item.id}}">
+      <view>
+        <view>{{item.title}}</view>
+        <view>{{item.date}}</view>
+      </view>
+      <view>
+        <text class="iconfont icon-qianwang"></text>
+      </view>
+    </view>
+  </view>
+  <view class="more" wx:if="{{more}}">正在加载</view>
+  <view class="null" wx:if="{{messageList.length === 0}}">
+    <image src="/assets/img/null.png"></image>
+    <view>暂无消息</view>
+  </view>
+</view>

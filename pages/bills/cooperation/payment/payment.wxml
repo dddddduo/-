@@ -1,0 +1,68 @@
+<!--pages/bills/cooperation/deposit/deposit.wxml-->
+<view id='deposit'>
+  <view class="deposit-list" wx:for="{{payList}}" wx:key="index">
+    <view class='list'>
+      <view><text class='span'>订金名称：</text><text class='p'>{{ item.name ? item.name : '暂无数据' }}</text></view>
+      <view><text class='span'>支付方式：</text><text class='p'>{{ item.type == 1 ? '现金' : item.type == 2 ? '支票' : item.type == 3 ? '银行承兑汇票' : item.type == 4 ? '商业承兑汇票' : item.type == 5 ? '信用证' : '' }}</text></view>
+    </view>
+    <!-- type === 1 && type === 2 -->
+    <view class='list' wx:if="{{item.type == 1 || item.type == 2}}">
+      <view><text class='span'>金额(元)：</text><text class='p'>{{ item.amount}}</text></view>
+      <view><text class='span'>支付日期：</text><text class='p'>{{ item.payDate ? item.payDate : '暂无数据' }}</text></view>
+    </view>
+    <!-- type === 3/4/5 -->
+    <view class='list' wx:if="{{item.type == 3 || item.type == 4 || item.type == 5}}">
+      <view><text class='span'>票据金额(元)：</text><text class='p'>{{ item.amount ? item.amount : '暂无数据' }}</text></view>
+      <view><text class='span'>出票日期：</text><text class='p'>{{ item.payDate ? item.payDate : '暂无数据' }}</text></view>
+      <view><text class='span'>汇票到期日：</text><text class='p'>{{ item.draftExpiration ? item.draftExpiration : '暂无数据' }}</text></view>
+    </view>
+    <!-- type === 2/3/4/5 -->
+    <view class='list' wx:if="{{item.type == 2 || item.type == 3 || item.type == 4 || item.type == 5}}">
+      <view><text class='span'>收款企业：</text><text class='p'>{{ item.receiveCompany ? item.receiveCompany : '暂无数据' }}</text></view>
+      <view><text class='span'>付款企业：</text><text class='p'>{{ item.payCompany ? item.payCompany : '暂无数据' }}</text></view>
+      <view><text class='span'>收款机构：</text><text class='p'>{{ item.receiveOrg ? item.receiveOrg : '暂无数据' }}</text></view>
+      <view><text class='span'>付款机构：</text><text class='p'>{{ item.payOrg ? item.payOrg : '暂无数据' }}</text></view>
+      <view><text class='span'>收款账号：</text><text class='p'>{{ item.receiveAccount ? item.receiveAccount : '暂无数据' }}</text></view>
+      <view><text class='span'>付款账号：</text><text class='p'>{{ item.payAccount ? item.payAccount : '暂无数据' }}</text></view>
+    </view>
+    <view class="ul-title">经办人信息</view>
+    <view class="agent_list">
+      <view class="agent_item" wx:for="{{item.agents}}" wx:for-item="agent" wx:key='{{index}}'>
+        <view>{{agent.name}}</view>
+        <view>{{agent.phone}}</view>
+      </view>
+      <view class="inner_null" wx:if="{{item.agents.length === 0}}">未添加经办人</view>
+    </view>
+    <view class="ul-title">电子原件或扫描件</view>
+    <view class="atta_list">
+      <view wx:for="{{item.attas}}" wx:key='{{index}}' wx:for-item="atta" class="atta_item">
+        <view wx:if="{{atta.extend === 'pdf'}}">{{atta.name}}</view>
+        <image src='{{_url + atta.url}}' data-index="{{index}}" lazy-load='1' bindtap="handlePreview" wx:else />
+      </view>
+      <view class="inner_null" wx:if="{{item.attas.length === 0}}">未添加电子原件</view>
+    </view>
+    <text class="ul-title">备注</text>
+    <view class="text_area">
+      <view class="info" wx:if="{{item.remark}}">{{item.remark}}</view>
+      <view class="inner_null" wx:else>未填写备注</view>
+    </view>
+    <!-- <view class="ul-title">经办人信息</view>
+    <view class='list' wx:for="{{item.agents}}" wx:for-item="agent" wx:key="index" wx:if="{{item.agents.length != 0}}">
+      <view><text class='span'>经办人姓名：</text><text class='p'>{{ agent.name }}</text></view>
+      <view><text class='span'>联系电话：</text><text class='p'>{{ agent.phone }}</text></view>
+    </view>
+    <view class="content_none" wx:if="{{item.agents.length == 0}}">暂无数据</view>
+    <view class="ul-title">电子原件或扫描件</view>
+    <view class='pdf_image' wx:for="{{item.attas}}" wx:for-item="atta" wx:key="index" wx:if="{{item.attas.length != 0}}">
+      <view class="pdf_list" wx:if="{{atta.extend != 'pdf'}}">
+        <text>{{ atta.name }}</text>
+      </view>
+      <view class="img_list" wx:else>
+        <image src="{{atta.url}}" alt=""></image>
+      </view>
+    </view>
+    <view class="content_none" wx:if="{{item.attas.length == 0}}">暂无数据</view>
+    <view class="ul-title">备注</view>
+    <view><text class='text_area'>{{ item.remark ? item.remark : '暂无数据' }}</text></view> -->
+  </view>
+</view>

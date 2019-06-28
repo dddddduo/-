@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/others/flash/flash",
+    "pages/index/index",
+    "pages/message/message",
+    "pages/me/me",
+    "pages/others/login/login",
+    "pages/bills/cooperation/order/order",
+    "pages/bills/cooperation/deposit/deposit",
+    "pages/bills/cooperation/delivery/delivery",
+    "pages/bills/cooperation/waybill/waybill",
+    "pages/bills/cooperation/acceptance/acceptance",
+    "pages/bills/cooperation/invoice/invoice",
+    "pages/bills/cooperation/payment/payment",
+    "pages/bills/cooperation/settlement/settlement",
+    "pages/chain/chain",
+    "pages/others/messageDetail/message_detail",
+    "pages/others/chainDetail/chain_detail",
+    "pages/others/personInfo/person_info",
+    "pages/others/personCard/person_card",
+    "pages/others/personAuth/person_auth",
+    "pages/others/add_info/add_info",
+    "pages/bills/contract/contract"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eb6100",
+    "navigationBarTitleText": "九星",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#eb6100",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的企业",
+        "iconPath": "assets/img/tab_bar/business-d.png",
+        "selectedIconPath": "assets/img/tab_bar/business.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "我的消息",
+        "iconPath": "assets/img/tab_bar/message1-d.png",
+        "selectedIconPath": "assets/img/tab_bar/message1.png"
+      },
+      {
+        "pagePath": "pages/chain/chain",
+        "text": "我的记账",
+        "iconPath": "assets/img/tab_bar/chain1-d.png",
+        "selectedIconPath": "assets/img/tab_bar/chain1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人中心",
+        "iconPath": "assets/img/tab_bar/mine-d.png",
+        "selectedIconPath": "assets/img/tab_bar/mine.png"
+      }
+    ]
+  }
+}

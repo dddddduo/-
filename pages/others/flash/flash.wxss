@@ -1,0 +1,23 @@
+/* pages/others/flash/flash.wxss */
+page {
+	height: 100%;
+}
+.container {
+	/*background: linear-gradient(#eb6100, #fff);*/
+	background: #fff;
+	color: #fff;
+	text-align: center;
+	padding-top: 300rpx;
+}
+.container image {
+	width: 202rpx;
+	height: 314rpx;
+}
+.container view {
+	margin-top: 60rpx;
+	font-size: 16px;
+	color: #eb6100;
+	font-style: italic;
+	font-weight: bolder;
+	opacity: .67;
+}

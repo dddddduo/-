@@ -1,0 +1,47 @@
+<!--pages/bills/cooperation/waybill/waybill.wxml-->
+<view id='waybill'>
+  <view class="waybill-list" wx:for="{{waybillList}}" wx:key="index">
+    <view class='list'>
+      <view><text class='span'>运单名称：</text><text class='p'>{{ item.name ? item.name : '暂无数据' }}</text></view>
+      <view><text class='span'>出单时间：</text><text class='p'>{{ item.outDate ? item.outDate : '暂无数据' }}</text></view>
+    </view>
+    <view class="ul-title">物流信息</view>
+    <view class='list'>
+      <view><text class='span'>承运企业：</text><text class='p'>{{ item.serviceCompany ? item.serviceCompany : '自运' }}</text></view>
+      <view><text class='span'>司机姓名：</text><text class='p'>{{ item.driver ? item.driver : '暂无数据' }}</text></view>
+      <view><text class='span'>联系方式：</text><text class='p'>{{ item.phone ? item.phone : '暂无数据' }}</text></view>
+      <view><text class='span'>身份证号：</text><text class='p'>{{ item.driverId ? item.driverId : '暂无数据' }}</text></view>
+      <view><text class='span'>出发地：</text><text class='p'>{{ item.source ? item.source : '暂无数据' }}</text></view>
+      <view><text class='span'>目的地：</text><text class='p'>{{ item.destination ? item.destination : '暂无数据' }}</text></view>
+    </view>
+    <view class="ul-title">商品信息</view>
+    <view class='list' wx:for="{{item.goods}}" wx:for-item="good" wx:key="index" wx:if="{{item.goods.length != 0}}">
+      <view><text class='span'>商品名称：</text><text class='p'>{{ good.name ? good.name : '暂无数据' }}</text></view>
+      <view><text class='span'>单位：</text><text class='p'>{{ good.unit ? good.unit : '暂无数据' }}</text></view>
+      <view><text class='span'>数量：</text><text class='p'>{{ good.number ? good.number : '暂无数据' }}</text></view>
+      <view><text class='span'>合计(元)：</text><text class='p'>{{ good.sum ? good.sum : '暂无数据' }}</text></view>
+    </view>
+    <view class="content_none" wx:if="{{item.goods.length == 0}}">暂无数据</view>
+    <view class="ul-title">经办人信息</view>
+    <view class="agent_list">
+      <view class="agent_item" wx:for="{{item.agents}}" wx:for-item="agent" wx:key='{{index}}'>
+        <view>{{agent.name}}</view>
+        <view>{{agent.phone}}</view>
+      </view>
+      <view class="inner_null" wx:if="{{item.agents.length === 0}}">未添加经办人</view>
+    </view>
+    <view class="ul-title">电子原件或扫描件</view>
+    <view class="atta_list">
+      <view wx:for="{{item.attas}}" wx:key='{{index}}' wx:for-item="atta" class="atta_item">
+        <view wx:if="{{atta.extend === 'pdf'}}">{{atta.name}}</view>
+        <image src='{{_url + atta.url}}' data-index="{{index}}" lazy-load='1' bindtap="handlePreview" wx:else />
+      </view>
+      <view class="inner_null" wx:if="{{item.attas.length === 0}}">未添加电子原件</view>
+    </view>
+    <text class="ul-title">备注</text>
+    <view class="text_area">
+      <view class="info" wx:if="{{item.remark}}">{{item.remark}}</view>
+      <view class="inner_null" wx:else>未填写备注</view>
+    </view>
+  </view>
+</view>

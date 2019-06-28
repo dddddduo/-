@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/*标准底色*/
+/*橙色*/
+/*浅橙色*/
+/*错误 红色*/
+/*对色 蓝色*/
+/*对色 绿色*/
+/* 文字颜色*/
+/*边框颜色*/
+/*底部按钮高度*/
+/*标准条目高度*/
+/*顶部导航栏高度*/
+.null {
+  padding: 1.86667rem 0;
+  color: #999;
+  font-size: 32px;
+  /*px*/
+  text-align: center;
+}
+
+.null img {
+  margin: 0.26667rem auto;
+  width: 3.2rem;
+}
+
+@keyframes slideUp {
+  from {
+    margin-top: 600px;
+  }
+  to {
+    margin-top: 0;
+  }
+}

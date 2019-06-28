@@ -1,0 +1,8 @@
+{
+  "easysass.formats": [
+    {
+      "format": "expanded",  // 压缩
+      "extension": ".wxss"
+    }
+  ]
+}
